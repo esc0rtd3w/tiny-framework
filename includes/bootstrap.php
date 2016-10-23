@@ -15,7 +15,7 @@ if(DEVELOPER_MODE){
 }*/
 
 function myclass($ch){return class_path."/".$ch.".php";} //add class by only name class,no need to define extension
-//Auto load classes
+//Auto load classes,Add all ur classess here 
 	require_once(myclass("users"));
 
 		
