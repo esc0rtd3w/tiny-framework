@@ -30,8 +30,7 @@ the theme path is defined as global vraible path in the config.php (default css,
 ``` define("css_path", path."/themes/css/bootstrap.min.css");```
 
 Link to CSS file <br />
-``` define("css_path", path."/themes/css/bootstrap.min.css");```
-<link rel="stylesheet" type="text/css" href=<?php echo css_path; ?>>
+``` <link rel="stylesheet" type="text/css" href=<?php echo css_path; ?>> ```
 
 
 
