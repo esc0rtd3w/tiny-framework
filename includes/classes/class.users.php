@@ -18,17 +18,8 @@ class users
 	function printUsers() //print all users on db
 	{
 		global $db;
-		$requestUsres=$db->query("select * from users ");
-		while ($rowUsersTable=$requestUsres->fetch_array()) {
-			echo $rowUsersTable["id"]." ".$rowUsersTable["username"]." ".$rowUsersTable["name"];
-		}
+		return $db->get('users'); // we use a prebuilt function from the MysqlDB class check out the documentation
 	}
-
-
-
-
-
-
 
 }
 

@@ -7,7 +7,9 @@
     $dbConfig["db"]="testdb";
     $dbConfig["port"]="3306";
     //this is the global variable to connect to db in all classes defined as global $db
-    $db=new mysqli($dbConfig["server"],$dbConfig["username"],$dbConfig["password"],$dbConfig["db"]);
+    //this is an implemented class take a look to the documentation https://github.com/joshcam/PHP-MySQLi-Database-Class
+    require_once('MysqliDb.php');
+    $db=new Mysqlidb($dbConfig["server"],$dbConfig["username"],$dbConfig["password"],$dbConfig["db"]);
    
    if ($db->connect_error) {
     die('Erreur de connexion (' . $db->connect_errno . ') '
@@ -21,7 +23,7 @@
     //Appliaction path directory_path exep: http://127.0.0.1/directory_path
     define("path", get_application_path()); 
     //website title
-    define("title", "FacebookApp");
+    define("title", "FirstApp");
     //application css & js file path settings,if CDN change the /themes with http:// ...
     define("css_path", path."/themes/css/bootstrap.min.css");
     define("js_bootstrap_path", path."/themes/js/bootstrap.min.js");

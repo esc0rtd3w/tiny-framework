@@ -1,14 +1,6 @@
 <?php
 require (dirname(__FILE__) . '/includes/bootstrap.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title><?php echo title; ?></title>
-<link rel="stylesheet" type="text/css" href=<?php echo css_path; ?>>
-
-</head>
-<body>
 
 
 <div class="jumbotron">
@@ -21,17 +13,22 @@ require (dirname(__FILE__) . '/includes/bootstrap.php');
 	</div>
 </div>
 
-Test Users class
-<?php
 
-users::testme();
+Test Users class
+
+<?php
+//this is only for Test
+users::testme(); //call the class method 
+echo "<br><strong>Users List in DB</strong><br>";
+$user=users::printUsers(); //print the users from the users class 
+
+foreach ($user as $key => $row) {
+echo $row["username"].'<br>';
+
+
+}
 
 ?>
 
 
-
-
-
-</body>
-</html>
 
