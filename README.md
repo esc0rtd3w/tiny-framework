@@ -38,6 +38,9 @@ Link to CSS file <br />
 In this Dir you can define the default structure of the page 
 header,footer,content .The default page is layout.php with css/js links.
 
+# Support ME
+This software is developed during my free time and I will be glad if somebody will support me.
+For another projects and articles visite my blog [https://nodeme.blogspot.com/](https://nodeme.blogspot.com/)
 
 
 
