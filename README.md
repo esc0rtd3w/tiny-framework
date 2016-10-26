@@ -9,6 +9,8 @@ app architecture
        -->JS <br/>
 * images
 * API (define libraries or SDK)
+* templates (global layout of the app)
+
 
 # How it works
 
