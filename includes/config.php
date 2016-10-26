@@ -1,4 +1,8 @@
 <?php
+/**
+ * Setup the global configuration of the app
+ * 
+ */
 
 //1 #### Mysql database settings
     $dbConfig["server"]="localhost";
@@ -16,6 +20,8 @@
             . $db->connect_error);
 }
 
+
+
 //2 global application settings 
     
     //Define Site ROOT PATH
@@ -25,15 +31,40 @@
     //website title
     define("title", "FirstApp");
     //application css & js file path settings,if CDN change the /themes with http:// ...
-    define("css_path", path."/themes/css/bootstrap.min.css");
-    define("js_bootstrap_path", path."/themes/js/bootstrap.min.js");
-    define("js_path", path."/themes/js/jquery.js");
+    define("css_path", path."themes/css/");
+    define("js_path", path."themes/js/jquery.js");
     //class directory
     define("class_path", root_path."includes/classes");
     //Debug mode
     define("debug", "False");
 
     
+
+
+
+
+
+//3 .Define global functions
+
+
+function render_stylesheet($src){ //include the stylesheet files with this function
+if (file_exists(root_path.'themes/css/'.$src)) {
+    $loadStyleSheet=css_path.$src;
+echo "<link rel='stylesheet' type='text/css' href='" . $loadStyleSheet . "' >" . PHP_EOL;
+}
+}    
+
+
+
+function LoadClass($className) //
+{
+    if (file_exists(class_path.'/'.$className.'.php')) {
+        require_once(class_path.'/'.$className.'.php');
+    }
+    else{
+        echo "Unable to Load your class";
+    }
+}
 
 
 

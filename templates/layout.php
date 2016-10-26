@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo title ?></title>
-<link rel="stylesheet" type="text/css" href=<?php echo css_path; ?>>
+<?php 
+render_stylesheet("bootstrap.min.css");
+?>
 <body>
+
+
+
 
 
 </body>

@@ -21,12 +21,12 @@ Test Users class
 users::testme(); //call the class method 
 echo "<br><strong>Users List in DB</strong><br>";
 $user=users::printUsers(); //print the users from the users class 
-
 foreach ($user as $key => $row) {
 echo $row["username"].'<br>';
-
-
 }
+
+render_stylesheet("j");
+
 
 ?>
 
