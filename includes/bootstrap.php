@@ -13,7 +13,6 @@
 //Include layout of the page with css and Js no need to includes this anymore on pages	
 	require_once(dirname(dirname(__FILE__))."/templates/layout.php");
 
-
 /*
 if(DEVELOPER_MODE){
 	ini_set('display_startup_errors', 1);

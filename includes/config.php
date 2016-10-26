@@ -23,24 +23,24 @@
 
 
 //2 global application settings 
-    
+    $appConfig["TITLE"]="DefaultApp";
+
+
+
+
     //Define Site ROOT PATH
 	define('root_path', dirname(dirname(__FILE__)) . "/");
     //Appliaction path directory_path exep: http://127.0.0.1/directory_path
     define("path", get_application_path()); 
     //website title
-    define("title", "FirstApp");
+    define("title", $appConfig["TITLE"]);
     //application css & js file path settings,if CDN change the /themes with http:// ...
     define("css_path", path."themes/css/");
-    define("js_path", path."themes/js/jquery.js");
+    define("js_path", path."themes/js/");
     //class directory
     define("class_path", root_path."includes/classes");
     //Debug mode
     define("debug", "False");
-
-    
-
-
 
 
 
@@ -54,7 +54,13 @@ echo "<link rel='stylesheet' type='text/css' href='" . $loadStyleSheet . "' >" .
 }
 }    
 
+function render_javascript($src){ //include the stylesheet files with this function
+if (file_exists(root_path.'themes/js/'.$src)) {
+    $loadJS=js_path.$src;
+    echo "<script type='text/javascript' src='" . $loadJS . "' ></script>" . PHP_EOL;
+}
 
+} 
 
 function LoadClass($className) //
 {
