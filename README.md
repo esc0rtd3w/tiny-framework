@@ -30,9 +30,12 @@ We use a prebuilt database class for fast implementation of function check out t
 [https://github.com/joshcam/PHP-MySQLi-Database-Class](https://github.com/joshcam/PHP-MySQLi-Database-Class)
 # themes 
 the theme path is defined as global vraible path in the config.php (default css,js are bootstrap files)<br />
-``` define("css_path", path."/themes/css/bootstrap.min.css");```
-Link to CSS file <br />
-``` <link rel="stylesheet" type="text/css" href=<?php echo css_path; ?>> ```
+to load any CSS file use render_css()
+``` 		<?php render_stylesheet("bootstrap.min.css"); ?>
+```
+<br />Load any JS file <br />
+``` <?php render_javascript("bootstrap.min.js"); ?>
+ ```
 
 # Templates
 In this Dir you can define the default structure of the page 
