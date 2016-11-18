@@ -1,4 +1,6 @@
-# StartNewPhpAppCoreBasic
+# PHP basic architecture 
+![](http://i.imgur.com/jN1EvBH.png)
+
 app architecture 
 * includes  <br />-->classes (define all the classess of the app) <br />
           -->config.php (define all settings of the app) <br />
